@@ -45,4 +45,9 @@ class Dealership
       "address" => @address
     }
   end
+
+  def average_price_of_car
+    str = (total_value / inventory_count).to_s
+    str.insert(-4,',')
+  end
 end
