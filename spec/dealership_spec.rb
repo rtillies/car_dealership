@@ -3,6 +3,7 @@ require './lib/car'
 require './lib/dealership'
 
 RSpec.describe Dealership do
+# Iteration 2
   it 'exists' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
 
@@ -33,4 +34,12 @@ RSpec.describe Dealership do
     expect(dealership.inventory).to eq([car_1, car_2])
     expect(dealership.inventory_count).to eq(2)
   end
+
+# Iteration 3
+it '#has_inventory?' do
+  dealership = Dealership.new("Acme Auto", "123 Main Street")
+
+  expect(dealership.has_inventory?).to eq(false)
+end
+
 end
