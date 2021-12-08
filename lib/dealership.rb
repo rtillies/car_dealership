@@ -38,4 +38,11 @@ class Dealership
     end
     total
   end
+
+  def details
+    info = {
+      "total_value" => total_value,
+      "address" => @address
+    }
+  end
 end
