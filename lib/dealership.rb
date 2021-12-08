@@ -30,4 +30,12 @@ class Dealership
     end
     cars
   end
+
+  def total_value
+    total = 0
+    @inventory.each do |car|
+      total += car.total_cost
+    end
+    total
+  end
 end
