@@ -2,7 +2,8 @@ class Car
   attr_reader :make,
               :model,
               :monthly_payment,
-              :loan_length
+              :loan_length,
+              :color
 
   def initialize(make_model, payment, length)
     string = make_model.split(" ")
@@ -10,6 +11,7 @@ class Car
     @model = string[1]
     @monthly_payment = payment
     @loan_length = length
+    @color = nil
   end
 
   def total_cost
