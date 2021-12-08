@@ -56,4 +56,15 @@ class Dealership
       car.total_cost
     end
   end
+
+  def inventory_hash
+    car_hash = Hash.new
+    @inventory.each do |car|
+      if !car_hash.keys.include?(car.make)
+        car_hash[car.make] = []
+      end
+      car_hash[car.make] << car
+    end
+    car_hash
+  end
 end
