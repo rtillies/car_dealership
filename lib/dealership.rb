@@ -20,4 +20,14 @@ class Dealership
   def has_inventory?
     inventory_count > 0
   end
+
+  def cars_by_make(make)
+    cars = []
+    @inventory.each do |car|
+      if car.make == make
+        cars << car
+      end
+    end
+    cars
+  end
 end
