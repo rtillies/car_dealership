@@ -50,4 +50,10 @@ class Dealership
     str = (total_value / inventory_count).to_s
     str.insert(-4,',')
   end
+
+  def cars_sorted_by_price
+    @inventory.sort_by do |car|
+      car.total_cost
+    end
+  end
 end
